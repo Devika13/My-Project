@@ -19,6 +19,16 @@ Please refer this image for the complete solution.
 3. AWS EKS cluster and its related infra is created using terraform.
 
 ## How to run the code
+### Prerequisites
+   > aws cli
+   
+   > kubectl 
+   
+   > terraform cli
+   
+   > docker
+
+
 1. Build the Dockerfile and push image to ECR repository
  
     > aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ECR_REPO_PATH
@@ -41,7 +51,7 @@ Please refer this image for the complete solution.
 3. Deploy Application on EKS
     > cd k8s_code
 
-    > Update the path of your image in deployments.yaml folder
+    > Update the path of your image in deployment.yaml file
 
     > aws configure
 
