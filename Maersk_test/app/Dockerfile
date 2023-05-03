@@ -1,4 +1,4 @@
-FROM python:3-alpine
+FROM python:3 
 
 # Create app directory
 WORKDIR /app
@@ -11,4 +11,4 @@ RUN pip install -r requirements.txt
 # Bundle app source
 COPY . /app
 
-CMD python app.py
+CMD flask run -h "0.0.0.0"

@@ -8,4 +8,6 @@ spec:
   capacity:
     storage: 5Gi
   hostPath:
-    path: /data/pv0001/
+    path: /tmp/pv0001/
+  claimRef:
+    name: data  
